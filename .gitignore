@@ -83,3 +83,7 @@ Content/StarterContent/*
 VSCode Files
 /.vscode/*
 BuildingEscape.code-workspace
+
+# Visual Studio Code
+.vscode
+*.code-workspace
