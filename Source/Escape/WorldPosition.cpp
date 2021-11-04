@@ -17,7 +17,9 @@ void UWorldPosition::BeginPlay()
 {
 	Super::BeginPlay();
 
+	UE_LOG(LogTemp, Display, TEXT("Escape>> testing display logging from object name %s"), *this->GetName());
 	UE_LOG(LogTemp, Warning, TEXT("Escape>> testing warn logging from object name %s"), *this->GetName());
+	UE_LOG(LogTemp, Error, TEXT("Escape>> testing error logging from object name %s"), *this->GetName());
 }
 
 // Called every frame
