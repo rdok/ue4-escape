@@ -1,0 +1,21 @@
+# UE4 Coding Standard: https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/CodingStandard
+# Options Explanation https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# Source https://gist.github.com/intinig/9bba3a3faee80250b781bf916a4ab8b7
+
+# General Style Guidelines https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/CodingStandard/#generalstyleissues
+Language:                           Cpp
+PointerAlignment:                   Left
+ColumnLimit:                        132
+BreakBeforeBraces:                  Allman
+
+# Tabs and Indenting https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/CodingStandard/#tabsandindenting
+TabWidth:                           4
+UseTab:                             Always
+IndentWidth:                        4
+ObjCBlockIndentWidth:               2
+IndentCaseLabels:                   true
+IndentPPDirectives:                 None
+IndentWrappedFunctionNames:         false
+ConstructorInitializerIndentWidth:  4
+ContinuationIndentWidth:            4
+NamespaceIndentation:               None

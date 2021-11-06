@@ -17,13 +17,15 @@ void UWorldPosition::BeginPlay()
 {
 	Super::BeginPlay();
 
+	FString Log = TEXT("hello");
+	FString* PrtLog = &Log;
 	UE_LOG(LogTemp, Display, TEXT("Escape>> testing display logging from object name %s"), *this->GetName());
 	UE_LOG(LogTemp, Warning, TEXT("Escape>> testing warn logging from object name %s"), *this->GetName());
 	UE_LOG(LogTemp, Error, TEXT("Escape>> testing error logging from object name %s"), *this->GetName());
 }
 
 // Called every frame
-void UWorldPosition::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
+void UWorldPosition::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
