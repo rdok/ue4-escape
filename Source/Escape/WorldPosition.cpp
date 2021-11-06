@@ -1,6 +1,7 @@
 // MIT License
 
 #include "WorldPosition.h"
+#include "GameFramework/Actor.h"
 
 // Sets default values for this component's properties
 UWorldPosition::UWorldPosition()
@@ -17,11 +18,9 @@ void UWorldPosition::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FString Log = TEXT("hello");
-	FString* PrtLog = &Log;
-	UE_LOG(LogTemp, Display, TEXT("Escape>> testing display logging from object name %s"), *this->GetName());
-	UE_LOG(LogTemp, Warning, TEXT("Escape>> testing warn logging from object name %s"), *this->GetName());
-	UE_LOG(LogTemp, Error, TEXT("Escape>> testing error logging from object name %s"), *this->GetName());
+	const FString owner_name = this->GetOwner()->GetName();
+
+	UE_LOG(LogTemp, Display, TEXT("Escape>> testing display logging from object name %s"), *owner_name);
 }
 
 // Called every frame
