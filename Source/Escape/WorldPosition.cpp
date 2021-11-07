@@ -2,6 +2,7 @@
 
 #include "WorldPosition.h"
 #include "GameFramework/Actor.h"
+#include "Math/Vector.h"
 
 // Sets default values for this component's properties
 UWorldPosition::UWorldPosition()
@@ -18,9 +19,11 @@ void UWorldPosition::BeginPlay()
 {
 	Super::BeginPlay();
 
-	const FString owner_name = this->GetOwner()->GetName();
+	const AActor* owner = GetOwner();
+	const FString owner_name = owner->GetName();
+	const FString textual_actor_location = owner->GetActorLocation().ToCompactString();
 
-	UE_LOG(LogTemp, Display, TEXT("Escape>> testing display logging from object name %s"), *owner_name);
+	UE_LOG(LogTemp, Display, TEXT("Escape>> %s is located at %s"), *owner_name, *textual_actor_location);
 }
 
 // Called every frame
